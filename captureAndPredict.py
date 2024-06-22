@@ -49,7 +49,7 @@ def create_frame_landmark_df(results, frame, xyz_skel):
 # Initialize the TensorFlow Lite interpreter
 interpreter = tf.lite.Interpreter("./model.tflite")
 interpreter.allocate_tensors()
-found_signatures = list(interpreter.get_signature_list().keys())
+found_signatures = list(interpreter.get_signature_list().keys()) 
 prediction_fn = interpreter.get_signature_runner("serving_default")
 
 # Load training data and create dictionaries for label translation
